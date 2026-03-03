@@ -1,69 +1,463 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Bisounec Studio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Bisounec Studio — Transformez votre image en outil de vente stratégique. Identité visuelle, contenu digital, développement web."/>
+  <title>Bisounec Studio — Identité Visuelle & Création Graphique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<div class="landing-container">
-  <!-- Navigation -->
-  <nav>
-    <h1>BISOUNEC STUDIO</h1>
-    <ul>
-      <li><a href="#about">À propos</a></li>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#accueil" class="nav-logo">
+      <img src="logo.jpeg" alt="Bisounec Studio" class="nav-logo-img"/>
+      <span><span class="logo-b">B</span>isounec <span class="logo-studio">Studio</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#processus">Processus</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <a href="https://wa.me/+261377495834" target="_blank" class="btn btn-nav">📲 Devis gratuit</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Création Digitale & Développement Web</h2>
-      <p>Solutions modernes et performantes pour entreprises et entrepreneurs</p>
-      <button onclick="scrollToSection('contact')">Contactez-moi</button>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#accueil" class="mobile-link">Accueil</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#processus" class="mobile-link">Processus</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="https://wa.me/+261377495834" class="btn btn-primary mobile-link" target="_blank">📲 Devis gratuit</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-blob blob-green"></div>
+    <div class="hero-blob blob-pink"></div>
+
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Agence de stratégie visuelle · Madagascar
+        </div>
+        <h1 class="hero-title">
+          Transformez votre image<br/>
+          en <span class="highlight-green">outil de vente</span><br/>
+          <span class="highlight-pink">stratégique.</span>
+        </h1>
+        <p class="hero-sub">
+          Nous créons des identités visuelles, du contenu digital et des sites web
+          qui font <strong>vendre</strong> et <strong>fidéliser</strong> vos clients.
+        </p>
+        <div class="hero-cta">
+          <a href="https://wa.me/+261377495834" target="_blank" class="btn btn-primary btn-lg">📲 Demander un devis</a>
+          <a href="#services" class="btn btn-ghost btn-lg">Découvrir nos services →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Personnalisé</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num">+40%</span>
+            <span class="stat-label">Visibilité moyenne</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="stat">
+            <span class="stat-num">48h</span>
+            <span class="stat-label">Premiers livrables</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="mockup-card card-main">
+          <div class="mockup-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="mockup-brand">
+            <div class="mockup-logo-shape"></div>
+            <div class="mockup-brand-text">
+              <div class="mock-line mock-line-lg"></div>
+              <div class="mock-line mock-line-sm"></div>
+            </div>
+          </div>
+          <div class="mockup-palette">
+            <div class="pal-color" style="background:#A3E635"></div>
+            <div class="pal-color" style="background:#FF007F"></div>
+            <div class="pal-color" style="background:#111111"></div>
+            <div class="pal-color" style="background:#FFFFFF;border:1px solid #333"></div>
+          </div>
+          <div class="mockup-preview">
+            <div class="preview-bar green-bar"></div>
+            <div class="preview-content">
+              <div class="mock-line"></div>
+              <div class="mock-line mock-line-sm"></div>
+              <div class="mock-btn-preview"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-card card-float card-float-1">
+          <div style="font-size:1.5rem">📈</div>
+          <div class="float-text"><strong>+30%</strong><span>Engagement</span></div>
+        </div>
+        <div class="mockup-card card-float card-float-2">
+          <div style="font-size:1.5rem">✨</div>
+          <div class="float-text"><strong>Brand Kit</strong><span>Livré complet</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Défiler</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- À propos -->
-  <section id="about">
-    <h2>À propos</h2>
-    <p>Je suis développeur Web & Mobile et fondatrice de BISOUNEC STUDIO. Je conçois des solutions digitales performantes et créatives.</p>
-  </section>
+  <!-- ══════════════════════════════════════
+       SERVICE PRINCIPAL
+  ══════════════════════════════════════ -->
+  <section class="service-main" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Service phare</span>
+        <h2 class="section-title">Création Graphique & <span class="highlight-green">Identité Visuelle</span></h2>
+        <p class="section-sub">La base de toute présence professionnelle. Nous construisons une identité visuelle complète qui attire vos clients et rend votre marque inoubliable.</p>
+      </div>
 
-  <!-- Services -->
-  <section id="services">
-    <h2>Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>Développement Web</h3>
-        <p>Création de sites web modernes et responsives</p>
-        <button onclick="alert('Contactez-moi pour ce service')">En savoir plus</button>
-      </div>
-      <div class="card">
-        <h3>Applications Mobile</h3>
-        <p>Développement d’applications mobiles intuitives</p>
-        <button onclick="alert('Contactez-moi pour ce service')">En savoir plus</button>
-      </div>
-      <div class="card">
-        <h3>Création Visuelle</h3>
-        <p>Supports visuels professionnels pour votre communication</p>
-        <button onclick="alert('Contactez-moi pour ce service')">En savoir plus</button>
+      <div class="service-main-grid reveal">
+        <div class="service-main-visual">
+          <div class="brand-showcase">
+            <div class="showcase-logo">
+              <div class="logo-shape-big"></div>
+              <div>
+                <div class="mock-line" style="width:80%;height:12px;margin-bottom:6px;background:#A3E635;border-radius:4px;opacity:0.9"></div>
+                <div class="mock-line" style="width:50%;height:8px;background:#fff;border-radius:4px;opacity:0.4"></div>
+              </div>
+            </div>
+            <div class="showcase-colors">
+              <div class="swatch" style="background:#A3E635"><span>#A3E635</span></div>
+              <div class="swatch" style="background:#FF007F"><span>#FF007F</span></div>
+              <div class="swatch" style="background:#111111"><span>#111</span></div>
+            </div>
+            <div class="showcase-typo">
+              <span class="typo-display">Aa</span>
+              <div>
+                <div class="typo-name">Montserrat Bold</div>
+                <div class="typo-sub-name">Poppins Regular</div>
+              </div>
+            </div>
+            <div class="showcase-badge-green">Kit complet inclus ✓</div>
+          </div>
+        </div>
+
+        <div class="service-main-content">
+          <ul class="service-features">
+            <li class="feature-item">
+              <span class="feature-icon">🎨</span>
+              <div>
+                <strong>Logo professionnel</strong>
+                <p>Unique, mémorable, déclinable sur tous vos supports print et digital.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">🎯</span>
+              <div>
+                <strong>Palette de couleurs cohérente</strong>
+                <p>Des couleurs choisies stratégiquement pour votre cible et votre secteur.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">✍️</span>
+              <div>
+                <strong>Typographie & style graphique</strong>
+                <p>Polices et styles qui renforcent votre positionnement et crédibilité.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">📱</span>
+              <div>
+                <strong>Kit complet d'identité visuelle</strong>
+                <p>Templates réseaux sociaux, flyers, affiches — tout ce qu'il vous faut.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon">🖨️</span>
+              <div>
+                <strong>Supports de communication</strong>
+                <p>Visuels cohérents pour vos supports print et digital professionnels.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="payment-methods">
+            <p class="payment-title">💳 Paiements acceptés</p>
+            <div class="payment-tags">
+              <span class="pay-tag">VISA</span>
+              <span class="pay-tag">MasterCard</span>
+              <span class="pay-tag">MVola</span>
+              <span class="pay-tag">Airtel Money</span>
+              <span class="pay-tag">Orange Money</span>
+              <span class="pay-tag">Virement</span>
+            </div>
+          </div>
+          <a href="https://wa.me/+261377495834" target="_blank" class="btn btn-primary btn-lg">
+            Obtenir mon identité visuelle →
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email : bisounecstudio@gmail.com</p>
-    <button onclick="alert('Merci de m\'avoir contacté !')">Envoyer un message</button>
-  </section>
-</div>
+  <!-- ══════════════════════════════════════
+       SERVICES SECONDAIRES
+  ══════════════════════════════════════ -->
+  <section class="autres-services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nos services</span>
+        <h2 class="section-title">Tout ce qu'il vous faut pour <span class="highlight-pink">rayonner</span></h2>
+      </div>
+      <div class="services-grid reveal">
 
-<script src="script.js"></script>
+        <div class="service-card">
+          <div class="service-card-icon">📣</div>
+          <h3>Création de contenu & Community Management</h3>
+          <p>Publications Facebook & Instagram, carrousels, stories, planification et animation de vos pages pour booster votre visibilité.</p>
+          <a href="service-community.html" class="service-link">En savoir plus →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">🌐</div>
+          <h3>Développement Web</h3>
+          <p>Sites vitrines, e-commerce, landing pages — responsive, optimisé mobile, conçu pour convertir vos visiteurs en clients.</p>
+          <a href="service-web.html" class="service-link">En savoir plus →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon">💬</div>
+          <h3>Support client digital</h3>
+          <p>Gestion de vos messages, emails et réponses aux prospects sur toutes vos plateformes digitales.</p>
+          <a href="service-support.html" class="service-link">En savoir plus →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROCESSUS
+  ══════════════════════════════════════ -->
+  <section class="processus" id="processus">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Notre méthode</span>
+        <h2 class="section-title">Comment nous <span class="highlight-green">travaillons</span></h2>
+        <p class="section-sub">Un processus structuré et transparent pour des résultats concrets et durables.</p>
+      </div>
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-icon">🔍</div>
+          <h3>Analyse</h3>
+          <p>On étudie votre marque, votre cible et vos objectifs pour construire une stratégie sur-mesure.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-icon">💡</div>
+          <h3>Stratégie</h3>
+          <p>On définit votre univers visuel, votre positionnement et le plan de communication adapté.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-icon">🎨</div>
+          <h3>Création</h3>
+          <p>Réalisation de tous vos éléments graphiques et contenus digitaux avec précision et talent.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-icon">🚀</div>
+          <h3>Livraison & Suivi</h3>
+          <p>Kit complet + guide d'utilisation + conseils réseaux sociaux. On reste disponibles après livraison.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════ -->
+  <section class="cta-banner reveal">
+    <div class="cta-banner-bg"></div>
+    <div class="container cta-banner-inner">
+      <h2>Prêt(e) à booster votre image<br/>et <span>attirer vos clients ?</span></h2>
+      <p>Contactez-nous dès maintenant — premier échange offert, sans engagement.</p>
+      <div class="cta-banner-btns">
+        <a href="https://wa.me/+261377495834" target="_blank" class="btn btn-primary btn-lg">📲 WhatsApp</a>
+        <a href="mailto:bisounecstudio@gmail.com" class="btn btn-white btn-lg">📩 Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Parlons de votre <span class="highlight-green">projet</span></h2>
+        <p class="section-sub">Remplissez le formulaire ou contactez-nous directement. On vous répond sous 24h.</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-info">
+          <a href="https://wa.me/+261377495834" target="_blank" class="contact-card">
+            <div class="contact-card-icon">📲</div>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>+261 37 749 58 34 — Réponse rapide</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="mailto:bisounecstudio@gmail.com" class="contact-card">
+            <div class="contact-card-icon">📩</div>
+            <div>
+              <strong>Email</strong>
+              <span>bisounecstudio@gmail.com</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="https://www.facebook.com/BisounecStudio" target="_blank" class="contact-card">
+            <div class="contact-card-icon">📘</div>
+            <div>
+              <strong>Facebook</strong>
+              <span>BisounecStudio</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+          <a href="https://www.instagram.com/bisounec?igsh=YnN0ZmQxbjNkaXVy" target="_blank" class="contact-card">
+            <div class="contact-card-icon">📸</div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@bisounec</span>
+            </div>
+            <span class="contact-arrow">→</span>
+          </a>
+
+          <div class="payment-info-box">
+            <p class="payment-title">💳 Modes de paiement</p>
+            <div class="payment-tags">
+              <span class="pay-tag">VISA</span>
+              <span class="pay-tag">MasterCard</span>
+              <span class="pay-tag">MVola</span>
+              <span class="pay-tag">Airtel Money</span>
+              <span class="pay-tag">Orange Money</span>
+              <span class="pay-tag">Virement bancaire</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" placeholder="+261 XX XXX XXXX" />
+          </div>
+          <div class="form-group">
+            <label for="service">Service souhaité</label>
+            <select id="service" name="service">
+              <option value="">Choisissez un service</option>
+              <option>Création Graphique & Identité Visuelle</option>
+              <option>Création de contenu & Community Management</option>
+              <option>Développement Web</option>
+              <option>Support client digital</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet, vos besoins, votre budget..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%" id="submitBtn">
+            Envoyer ma demande →
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Merci ! Votre message a été envoyé. Nous vous répondons sous 24h.
+          </div>
+          <div class="form-error" id="formError">
+            ❌ Une erreur s'est produite. Contactez-nous directement sur WhatsApp.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="logo.jpeg" alt="Bisounec Studio" class="footer-logo-img"/>
+          <span><span class="logo-b">B</span>isounec <span class="logo-studio">Studio</span></span>
+        </div>
+        <p>Transformez votre image en outil de vente stratégique.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/BisounecStudio" target="_blank" class="social-btn">Facebook</a>
+          <a href="https://www.instagram.com/bisounec?igsh=YnN0ZmQxbjNkaXVy" target="_blank" class="social-btn">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#processus">Processus</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Nous contacter</h4>
+        <ul>
+          <li><a href="https://wa.me/+261377495834" target="_blank">📲 WhatsApp</a></li>
+          <li><a href="mailto:bisounecstudio@gmail.com">📩 bisounecstudio@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/BisounecStudio" target="_blank">📘 Facebook</a></li>
+          <li><a href="https://www.instagram.com/bisounec?igsh=YnN0ZmQxbjNkaXVy" target="_blank">📸 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bisounec Studio — Tous droits réservés | <a href="#">Mentions légales</a></p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/+261377495834" target="_blank" class="whatsapp-float" title="Nous contacter sur WhatsApp">💬</a>
+
+  <script src="script.js"></script>
 </body>
 </html>
