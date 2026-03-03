@@ -1,0 +1,188 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+/* Container */
+.landing-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  z-index: 100;
+}
+
+nav h1 {
+  color: #FF0080;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #00FF80;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FF0080;
+  text-shadow: 0 0 10px #FF0080;
+}
+
+/* Hero */
+#hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FF0080, #00FF80);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#hero h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+#hero button {
+  background-color: #000000;
+  color: #FF0080;
+  border: 2px solid #FF0080;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#hero button:hover {
+  background-color: #FF0080;
+  color: white;
+  box-shadow: 0 0 15px #FF0080;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+h2 {
+  color: #FF0080;
+  margin-bottom: 30px;
+}
+
+/* Services */
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background-color: #1c1c1c;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #FF0080;
+}
+
+.card h3 {
+  color: #00FF80;
+  margin-bottom: 15px;
+}
+
+.card p {
+  margin-bottom: 20px;
+}
+
+.card button {
+  background-color: #FF0080;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #00FF80;
+  color: black;
+  box-shadow: 0 0 15px #00FF80;
+}
+
+/* Contact */
+#contact button {
+  background-color: #FF0080;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contact button:hover {
+  background-color: #00FF80;
+  color: black;
+  box-shadow: 0 0 15px #00FF80;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
